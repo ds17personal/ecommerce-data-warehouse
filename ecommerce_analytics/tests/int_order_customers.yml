@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_order_customers
+    description: "Customer-level dataset containing customer details and order activity."
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_orders
+        description: "Total number of orders placed by the customer."
+        data_tests:
+          - not_null

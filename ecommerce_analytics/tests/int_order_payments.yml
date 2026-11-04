@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_order_payments
+    description: "Enriched order payment dataset containing order and payment details."
+
+    columns:
+      - name: payment_id
+        description: "Unique identifier for each payment for each order."
+        data_tests:
+          - unique

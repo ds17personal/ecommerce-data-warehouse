@@ -1,0 +1,21 @@
+
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# dbt generated files
+ecommerce_analytics/target/
+ecommerce_analytics/dbt_packages/
+ecommerce_analytics/logs/
+logs/
+
+# Credentials
+.env
+.env.*
+
+# IDE
+.vscode/

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_product_sales
+    description: "Product-level sales metrics including units sold, sales amount and order-item count."
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_units_sold
+        data_tests:
+          - not_null
+
+      - name: total_sales_amount
+        data_tests:
+          - not_null
+
+      - name: total_order_items
+        data_tests:
+          - not_null

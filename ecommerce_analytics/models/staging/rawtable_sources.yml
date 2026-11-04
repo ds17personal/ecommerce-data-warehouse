@@ -1,0 +1,15 @@
+
+version: 2
+
+sources:
+  - name: ecommerce_raw
+    database: ECOMMERCE_DB
+    schema: ECOMMERCE_RAW_DB
+
+    tables:
+      - name: customers
+      - name: products
+      - name: orders
+      - name: order_items
+      - name: payments
+      - name: shipments

@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: int_order_shipments
+    description: "Order dataset enriched with shipment details, including orders without shipments."
+    columns:
+      - name: shipment_id
+        description: "Unique shipment identifier; NULL when an order has no shipment."
+        data_tests:
+          - unique:
+              config:
+                where: "shipment_id is not null"

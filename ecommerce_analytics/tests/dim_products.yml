@@ -1,0 +1,36 @@
+
+version: 2
+
+models:
+  - name: dim_products
+    description: "Product dimension containing product details and price classifications."
+
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: product_name
+        description: "Name of the product."
+        data_tests:
+          - not_null
+
+      - name: category
+        description: "Product category."
+        data_tests:
+          - not_null
+
+      - name: price
+        description: "Current listed price of the product."
+        data_tests:
+          - not_null
+
+      - name: product_price_band
+        description: "Product price classification."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Budget', 'Mid-Range', 'Premium']

@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: int_order_items_enriched
+    description: "Enriched order item dataset containing order, customer and product details."
+
+    columns:
+      - name: order_item_id
+        description: "Unique identifier for each order item."
+        data_tests:
+          - not_null
+          - unique

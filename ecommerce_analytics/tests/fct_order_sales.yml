@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: fct_order_sales
+    description: "Order-level fact table containing order quantities and sales metrics."
+
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        data_tests:
+          - not_null
+
+      - name: total_items
+        data_tests:
+          - not_null
+
+      - name: total_quantity
+        data_tests:
+          - not_null
+
+      - name: order_amount
+        data_tests:
+          - not_null

@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: fct_customer_revenue
+    description: "Customer-level revenue summary containing order count, total revenue and average order value."
+
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_orders
+        description: "Total number of orders placed by the customer."
+        data_tests:
+          - not_null
+
+      - name: total_revenue
+        description: "Total order value across all orders placed by the customer."
+        data_tests:
+          - not_null
